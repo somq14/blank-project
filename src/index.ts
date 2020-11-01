@@ -1,3 +1,8 @@
-import { message } from "src/message"
+import "react-hot-loader"
+import React from "react"
+import ReactDOM from "react-dom"
+import { hot } from "react-hot-loader/root"
 
-console.log(message)
+import { App } from "src/components/App"
+
+ReactDOM.render(React.createElement(hot(App)), document.getElementById("root"))

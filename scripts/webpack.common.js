@@ -24,7 +24,12 @@ module.exports = {
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
-          presets: ["@babel/preset-env", "@babel/preset-typescript"],
+          presets: [
+            "@babel/preset-env",
+            "@babel/preset-react",
+            "@babel/preset-typescript",
+          ],
+          plugins: ["react-hot-loader/babel"],
         },
       },
     ],
