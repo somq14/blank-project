@@ -22,7 +22,11 @@
     ]
   },
   "settings": {
-    "import/resolver": "typescript"
+    "import/resolver": {
+      "webpack": {
+        "config": "./scripts/webpack.common.js"
+      }
+    }
   },
   "ignorePatterns": ["dist/"]
 }

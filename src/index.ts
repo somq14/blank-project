@@ -1,3 +1,3 @@
-import { message } from "./message"
+import { message } from "src/message"
 
 console.log(message)
