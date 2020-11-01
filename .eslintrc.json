@@ -1,0 +1,28 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    // 以下でprettierと競合するルールを無効化する
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "no-restricted-imports": ["error", { "patterns": ["../"] }],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc" }
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": "typescript"
+  },
+  "ignorePatterns": ["dist/"]
+}
